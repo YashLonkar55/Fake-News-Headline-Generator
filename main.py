@@ -1,3 +1,4 @@
+from string import templatelib
 import random
 
 subjects = [
@@ -38,97 +39,101 @@ subjects = [
     "An angry auto driver"
 ]
 
-actions = [
-    "was spotted",
-    "unexpectedly announced",
-    "secretly revealed",
-    "accidentally leaked",
-    "attempted to",
-    "is now demanding",
-    "has been arrested for",
-    "accidentally invented",
-    "swapped bodies with",
-    "declared war on",
-    "challenged",
-    "started teaching",
-    "won a competition against",
-    "opened a startup with",
-    "was caught dancing with",
-    "launched",
-    "sold",
-    "forgot"
+templates = [
+    "{subject} was spotted with {object} in {location}, {connector}.",
+    "{subject} secretly revealed {object} at {location}, {connector}.",
+    "{subject} accidentally invented {object} in {location}, {connector}.",
+    "{subject} launched {object} from {location}, {connector}.",
+    "{subject} found {object} in {location}, {connector}.",
+    "{subject} forgot {object} at {location}, {connector}.",
+    "{subject} bought {object} from {location}, {connector}.",
+    "{subject} sold {object} in {location}, {connector}.",
+    "{subject} challenged everyone to use {object} in {location}, {connector}.",
+    "{subject} announced free {object} for everyone in {location}, {connector}.",
+    "{subject} claimed {object} was discovered in {location}, {connector}.",
+    "{subject} was caught hiding {object} inside {location}, {connector}.",
+    "{subject} accidentally delivered {object} to {location}, {connector}.",
+    "{subject} started a business selling {object} in {location}, {connector}.",
+    "{subject} used {object} to solve traffic in {location}, {connector}.",
+    "{subject} gifted {object} to everyone in {location}, {connector}.",
+    "{subject} lost {object} somewhere near {location}, {connector}.",
+    "{subject} was seen dancing with {object} at {location}, {connector}.",
+    "{subject} claims {object} will change the future of India, {connector}.",
+    "{subject} challenged aliens using {object} near {location}, {connector}."
 ]
 
 objects = [
     "a talking dog",
-    "the secret to cold fusion",
-    "a portal to Narnia",
-    "infinite pizza",
-    "a plan to cancel Mondays",
-    "flying lessons for cats",
-    "anti-gravity socks",
-    "the recipe for happiness",
-    "a time machine",
-    "unlimited biryani",
-    "free samosas for everyone",
-    "IPL trophy",
     "a magical cricket bat",
+    "anti-gravity socks",
     "a lifetime supply of pani puri",
-    "a plate of butter chicken",
-    "India's hidden treasure",
-    "the world's largest cup of chai",
-    "an AI-powered auto rickshaw",
-    "a secret Bollywood script"
+    "unlimited biryani",
+    "a giant samosa",
+    "an invisible auto rickshaw",
+    "a time machine",
+    "an AI-powered cow",
+    "a flying elephant",
+    "a robot chaiwala",
+    "the world's biggest dosa",
+    "a secret Bollywood script",
+    "a portal to Mars",
+    "a WiFi-powered umbrella",
+    "a golden vada pav",
+    "a self-driving tractor",
+    "a dinosaur",
+    "a UFO",
+    "a talking buffalo"
 ]
 
 locations = [
-    "the Moon",
     "Mumbai",
     "Delhi",
     "Bengaluru",
     "Hyderabad",
     "Chennai",
-    "Kolkata",
     "Goa",
     "the Taj Mahal",
     "the Red Fort",
     "Parliament",
-    "the IPL stadium",
-    "a Mumbai local train",
-    "a roadside tea stall",
-    "ISRO headquarters",
-    "the International Space Station",
+    "ISRO Headquarters",
+    "an IPL stadium",
+    "a roadside chai stall",
+    "a metro station",
     "the Himalayas",
+    "the Moon",
+    "Mars",
     "a shopping mall",
-    "the back of a bus"
+    "a railway station",
+    "an engineering college",
+    "a movie theatre"
 ]
 
 connectors = [
-    "causing chaos",
-    "leading to hilarious consequences",
-    "sparking global debate",
-    "much to everyone's surprise",
-    "in a shocking turn of events",
-    "and the internet exploded",
-    "and scientists are baffled",
-    "while everyone watched in disbelief",
-    "breaking every social media record",
-    "making memes trend worldwide",
-    "leaving reporters speechless",
-    "and nobody saw it coming"
+    "leaving everyone speechless",
+    "making memes go viral",
+    "confusing scientists",
+    "breaking the internet",
+    "according to unverified sources",
+    "and nobody knows why",
+    "forcing people to question reality",
+    "creating nationwide confusion",
+    "starting a new internet trend",
+    "while everyone watched in disbelief"
 ]
-while True:
-    subject=random.choice(subjects)
-    action=random.choice(actions)
-    object=random.choice(objects)
-    location=random.choice(locations)
-    connector=random.choice(connectors)
 
-    headline=f" BREAKING NEWS: {subject} {action} {object} {location} {connector}"
-    print("\n" + headline)
+while True:
+    template=random.choice(templates)
+    
+    headline=template.format(
+        subject=random.choice(subjects),
+        object=random.choice(objects),
+        location=random.choice(locations),
+        connector=random.choice(connectors)
+    )
+    print("\n BREAKING NEWS: " + headline)
 
     user_input=input("\n Do you want another headline? (y/n):").strip().lower()
     if user_input =="n":
         break
 
-    print("\n Thanks for using Fake News Headline Generator")
+print("\n Thanks for using Fake News Headline Generator")
