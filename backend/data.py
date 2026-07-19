@@ -1,6 +1,3 @@
-from string import templatelib
-import random
-
 subjects = [
     "Barack Obama",
     "Donald Trump",
@@ -120,20 +117,3 @@ connectors = [
     "starting a new internet trend",
     "while everyone watched in disbelief"
 ]
-
-while True:
-    template=random.choice(templates)
-    
-    headline=template.format(
-        subject=random.choice(subjects),
-        object=random.choice(objects),
-        location=random.choice(locations),
-        connector=random.choice(connectors)
-    )
-    print("\n BREAKING NEWS: " + headline)
-
-    user_input=input("\n Do you want another headline? (y/n):").strip().lower()
-    if user_input =="n":
-        break
-
-print("\n Thanks for using Fake News Headline Generator")
