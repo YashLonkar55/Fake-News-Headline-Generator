@@ -10,7 +10,7 @@ This project was built as part of my Python learning journey to understand the b
 
 ## 🚀 Demo
 
-**Live:** *Add your Vercel URL here*
+**Live:** *[Add your Vercel URL here](https://fake-news-headline-generator-three.vercel.app/)*
 
 ---
 
