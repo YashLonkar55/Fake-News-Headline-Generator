@@ -7,11 +7,12 @@ from generator import generate_headline
 app =FastAPI()
 
 app.add_middleware(
+    app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:5173", "http://localhost:5174","https://fake-news-headline-generator-three.vercel.app"],
-    allow_credentials=True,
+    allow_origins=["*"],
     allow_methods=["*"],
     allow_headers=["*"],
+)
 )
 
 @app.get("/")
