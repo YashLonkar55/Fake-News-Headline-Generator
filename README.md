@@ -131,25 +131,3 @@ While building this project, I learned:
 * Building a simple full-stack application
 
 ---
-
-## 💡 Future Improvements
-
-* Headline categories
-* Copy to clipboard
-* Headline history
-* AI-generated headlines
-* Download as image
-* Dark/Light theme
-* Share to social media
-
----
-
-## 🤝 Contributing
-
-Suggestions and improvements are always welcome. Feel free to fork the repository and submit a pull request.
-
----
-
-## 📄 License
-
-This project is open source and available under the MIT License.
