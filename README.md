@@ -12,14 +12,6 @@ This project was built as part of my Python learning journey to understand the b
 
 **Live:** *[Project Live Link](https://fake-news-headline-generator-three.vercel.app/)*
 
----
-
-## 📸 Preview
-
-*Add screenshots or GIFs here*
-
----
-
 ## ✨ Features
 
 * Generate random fake news headlines
