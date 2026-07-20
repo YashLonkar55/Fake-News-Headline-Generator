@@ -110,10 +110,23 @@ connectors = [
     "making memes go viral",
     "confusing scientists",
     "breaking the internet",
-    "according to unverified sources",
+    "according to sources",
     "and nobody knows why",
     "forcing people to question reality",
     "creating nationwide confusion",
     "starting a new internet trend",
     "while everyone watched in disbelief"
+]
+
+sources=[
+    "Trust Me Bro",
+    "Whatsapp University",
+    "My Dog Told Me",
+     "My Cat Confirmed",
+     "My Uncle",
+     "Mom Said So",
+     "Breaking Chai News",
+    "Local Tea Stall",
+    "Hostel Rumors",
+
 ]

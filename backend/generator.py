@@ -2,11 +2,15 @@ import random
 from data import *
 
 def generate_headline():
-    template=random.choice(templates)
+    template = random.choice(templates)
+    source = random.choice(sources)
 
-    return template.format(
+    headline = template.format(
         subject=random.choice(subjects),
         object=random.choice(objects),
         location=random.choice(locations),
-        connector=random.choice(connectors)
+        connector=random.choice(connectors),
+        source=source,
     )
+
+    return {"headline": headline, "source": source}

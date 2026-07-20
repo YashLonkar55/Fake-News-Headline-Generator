@@ -8,7 +8,7 @@ app =FastAPI()
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:5173"],
+    allow_origins=["http://localhost:5173", "http://localhost:5174"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
@@ -22,6 +22,8 @@ def home():
 
 @app.get("/headline")
 def headline():
-    return{
-        "headline":generate_headline()
+    result = generate_headline()
+    return {
+        "headline": result["headline"],
+        "source": result["source"],
     }

@@ -1,11 +1,27 @@
-function GenerateButton({ onClick }) {
+function GenerateButton({ onClick, loading }) {
   return (
-    <button
-      onClick={onClick}
-      className="bg-red-600 hover:bg-red-700 px-8 py-3 rounded-xl font-semibold transition-all duration-300 cursor-pointer"
-    >
-      Generate Headline
-    </button>
+    <div className="generate-btn-wrapper">
+      <div className="generate-btn-glow" />
+      <button
+        id="generate-headline-btn"
+        onClick={onClick}
+        disabled={loading}
+        className={`generate-btn${loading ? " loading" : ""}`}
+        aria-label="Generate a fake news headline"
+      >
+        {loading ? (
+          <>
+            <span className="btn-spinner" />
+            Generating…
+          </>
+        ) : (
+          <>
+            <span className="btn-icon">⚡</span>
+            Generate Headline
+          </>
+        )}
+      </button>
+    </div>
   );
 }
 

@@ -1,5 +1,47 @@
-@import "tailwindcss";
+/* ───────────────────────────────────────────────
+   Global Reset & Design System
+─────────────────────────────────────────────── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --font: 'Inter', sans-serif;
+
+  /* Palette */
+  --bg-deep:      #03010d;
+  --bg-mid:       #0a0520;
+  --accent-1:     #7c3aed;
+  --accent-2:     #ec4899;
+  --accent-glow:  rgba(124, 58, 237, 0.45);
+  --accent-glow2: rgba(236, 72, 153, 0.35);
+
+  /* Glass */
+  --glass-bg:     rgba(255, 255, 255, 0.05);
+  --glass-border: rgba(255, 255, 255, 0.10);
+  --glass-hover:  rgba(255, 255, 255, 0.08);
+
+  /* Text */
+  --text-primary:   #f1f5f9;
+  --text-secondary: #94a3b8;
+  --text-muted:     #475569;
+}
+
+html {
+  scroll-behavior: smooth;
+}
 
 body {
-  font-family: "Poppins", sans-serif;
+  font-family: var(--font);
+  background-color: var(--bg-deep);
+  color: var(--text-primary);
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+#root {
+  min-height: 100vh;
 }
