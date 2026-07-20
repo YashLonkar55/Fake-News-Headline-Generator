@@ -1,27 +1,29 @@
 import { useState } from "react";
 import api from "./services/api";
 
+import Header from "./components/Header";
+import GenerateButton from "./components/GenerationButton";
+import HeadlineCard from "./components/HeadlineCard";
+
 function App() {
   const [headline, setHeadline] = useState("");
 
-  const generateHeadline = async () => {
+  async function generateHeadline() {
     try {
       const response = await api.get("/headline");
       setHeadline(response.data.headline);
-    } catch (error) {
-      console.error("Error:", error);
+    } catch (err) {
+      console.error(err);
     }
-  };
+  }
 
   return (
-    <div style={{ padding: "40px" }}>
-      <h1>📰 Fake News Headline Generator</h1>
+    <div className="min-h-screen bg-slate-950 text-white flex flex-col justify-center items-center gap-10 px-6">
+      <Header />
 
-      <button onClick={generateHeadline}>
-        Generate Headline
-      </button>
+      <GenerateButton onClick={generateHeadline} />
 
-      <h2>{headline}</h2>
+      <HeadlineCard headline={headline} />
     </div>
   );
 }
